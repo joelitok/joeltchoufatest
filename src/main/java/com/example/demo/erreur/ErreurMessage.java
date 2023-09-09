@@ -4,14 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @Builder
 public class ErreurMessage {
     private  int status;
-    private Date  timestamp;
+    private LocalDate  timestamp;
     private  String message;
 
 }
