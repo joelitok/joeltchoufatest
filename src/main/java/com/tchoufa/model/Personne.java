@@ -1,9 +1,6 @@
 package com.tchoufa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -11,6 +8,7 @@ import java.time.LocalDate;
 
 @Data
 @Entity
+@Table(name = "person")
 @RequiredArgsConstructor
 public class Personne {
     @Id
