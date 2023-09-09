@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.controller.api.PersonneApi;
 import com.example.demo.dto.PersonneDTO;
+import com.example.demo.erreur.ErreurPersonneException;
 import com.example.demo.service.ServicePersonne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class ControllerPersonne implements PersonneApi {
     }
 
     @Override
-    public PersonneDTO save(PersonneDTO dto) {
+    public PersonneDTO save(PersonneDTO dto) throws ErreurPersonneException {
         return servicePersonne.save(dto);
     }
 

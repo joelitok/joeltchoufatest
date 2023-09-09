@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 
 import com.example.demo.dto.PersonneDTO;
+import com.example.demo.erreur.ErreurPersonneException;
 import com.example.demo.model.Personne;
 import com.example.demo.repository.RepositoryPersonne;
 import lombok.extern.slf4j.Slf4j;
@@ -25,14 +26,14 @@ public class ServicePersonneImpl implements ServicePersonne {
     }
 
     @Override
-    public PersonneDTO save(PersonneDTO personneDTO) {
+    public PersonneDTO save(PersonneDTO personneDTO) throws ErreurPersonneException {
         if (Objects.nonNull(personneDTO) && Objects.nonNull(personneDTO.getDateNaissance())
                 && (calculateAge(personneDTO.getDateNaissance()) <= 150)){
             Personne savedPersonne = repositoryPersonne.save(PersonneDTO.toEntity(personneDTO));
             return PersonneDTO.fromEntity(savedPersonne);
 
         }
-        throw new RuntimeException();
+        throw new ErreurPersonneException("Age superieur a 150 ans");
     }
 
 
