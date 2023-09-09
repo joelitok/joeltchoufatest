@@ -1,21 +1,31 @@
-package com.tchoufa.model;
+package com.example.demo.model;
 
-import jakarta.persistence.*;
+
+
+
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
 @Entity
-@Table(name = "person")
 @RequiredArgsConstructor
+@Table(name = "personne")
 public class Personne {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "nom")
     private String nom;
+
+    @Column(name = "prenom")
     private String prenom;
+
+    @Column(name = "dateNaissance")
     private LocalDate dateNaissance;
 
 }

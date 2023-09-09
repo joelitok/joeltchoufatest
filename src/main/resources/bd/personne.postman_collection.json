@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "3055a75c-eaa2-4058-bb5b-6b6cf840b38f",
+		"name": "personne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6564300"
+	},
+	"item": [
+		{
+			"name": "localhost:2022/personnes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2022/personnes",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"personnes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:2022/personne/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nom\": \"joelitokn2\",\r\n\"prenom\": \"joeltchoufon2\",\r\n\"dateNaissance\": \"1875-05-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2022/personne/create",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"personne",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
