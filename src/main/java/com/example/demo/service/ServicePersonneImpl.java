@@ -25,6 +25,12 @@ public class ServicePersonneImpl implements ServicePersonne {
         this.repositoryPersonne = repositoryPersonne;
     }
 
+    /**
+     *  En registrer une personne
+     * @param personneDTO
+     * @return
+     * @throws ErreurPersonneException
+     */
     @Override
     public PersonneDTO save(PersonneDTO personneDTO) throws ErreurPersonneException {
         if (Objects.nonNull(personneDTO) && Objects.nonNull(personneDTO.getDateNaissance())
@@ -37,13 +43,21 @@ public class ServicePersonneImpl implements ServicePersonne {
     }
 
 
-
+    /**
+     *
+     * @param dateOfBirth
+     * @return calculer l'age
+     */
     public int calculateAge(LocalDate dateOfBirth) {
         LocalDate currentDate = LocalDate.now();
         Period period = Period.between(dateOfBirth, currentDate);
         return period.getYears();
     }
 
+    /**
+     * List des personnes
+     * @return
+     */
 
     public List<PersonneDTO> getAllPersonnes() {
         var sortList = new ArrayList<PersonneDTO>();
