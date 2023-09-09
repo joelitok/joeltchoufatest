@@ -24,3 +24,7 @@ PARTIE THEORIQUE
 NB: Vous trouverez dans le dossier bd present dans ressource la collection postman.
 Le jeux de donnée se trouvant dans le fichier personne.sql à importer dans la base une donnée SQL.
 le port de l'application est : 2022
+
+- endpoint du service
+- pour ajouter: localhost:2022/personne/create
+- pour recuperer la liste: http://localhost:2022/personnes
