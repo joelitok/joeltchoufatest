@@ -61,8 +61,7 @@ public class ServicePersonneImpl implements ServicePersonne {
 
     public List<PersonneDTO> getAllPersonnes() {
         var sortList = new ArrayList<PersonneDTO>();
-        repositoryPersonne.findAllByOrderByNomAndPrenom().forEach(
-                personne -> sortList.add(PersonneDTO.fromEntity(personne)) );
+        repositoryPersonne.findAllByOrderByNomAndPrenom().forEach(personne -> sortList.add(PersonneDTO.fromEntity(personne)));
         return sortList;
     }
 }

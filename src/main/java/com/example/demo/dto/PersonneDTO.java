@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Column;
 import java.time.LocalDate;
 
 @Builder
@@ -37,7 +36,7 @@ public class PersonneDTO {
         if (personneDTO == null){
             return null;
         }
-        Personne personne = new Personne();
+        var personne = new Personne();
         personne.setId(personneDTO.getId());
         personne.setNom(personneDTO.getNom());
         personne.setPrenom(personneDTO.getPrenom());

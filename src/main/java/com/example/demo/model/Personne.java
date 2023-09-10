@@ -1,11 +1,8 @@
 package com.example.demo.model;
 
 
-
-
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
 
 import javax.persistence.*;
 import java.time.LocalDate;
